@@ -142,7 +142,7 @@ COPY --chown=etherpad:etherpad ${SETTINGS} "${EP_DIR}"/settings.json
 
 # Fix group permissions
 # Note: For some reason increases image size from 257 to 334.
-# RUN chmod -R g=u .
+RUN chmod -R g=u .
 
 USER etherpad
 

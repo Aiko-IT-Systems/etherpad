@@ -9,7 +9,12 @@ services:
     build:
       context: .
       args:
-        ETHERPAD_PLUGINS:
+        ETHERPAD_PLUGINS: # >-
+#          ep_embedded_hyperlinks2
+#          ep_headings2
+#          ep_align
+#          ep_markdown
+#          ep_­adminpads2
       # change from development to production if needed
       target: development
     tty: true
@@ -37,6 +42,8 @@ services:
       DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DEV_ENV_DISABLE_IP_LOGGING:-true}
       SOFFICE: ${DOCKER_COMPOSE_APP_DEV_ENV_SOFFICE:-null}
       TRUST_PROXY: ${DOCKER_COMPOSE_APP_DEV_ENV_TRUST_PROXY:-true}
+#    env_file:
+#        - path: ./.env
     restart: always
     ports:
       - "${DOCKER_COMPOSE_APP_DEV_PORT_PUBLISHED:-9001}:${DOCKER_COMPOSE_APP_DEV_PORT_TARGET:-9001}"
@@ -51,6 +58,8 @@ services:
       POSTGRES_PORT: ${DOCKER_COMPOSE_POSTGRES_DEV_ENV_POSTGRES_PORT:-5432}
       POSTGRES_USER: ${DOCKER_COMPOSE_POSTGRES_DEV_ENV_POSTGRES_USER:?}
       PGDATA: /var/lib/postgresql/data/pgdata
+#    env_file:
+#        - path: ./.env
     restart: always
     # Exposing the port is not needed unless you want to access this database instance from the host.
     # Be careful when other postgres docker container are running on the same port
