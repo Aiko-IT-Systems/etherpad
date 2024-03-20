@@ -650,5 +650,10 @@
   /*
    * Enable/Disable case-insensitive pad names.
    */
-  "lowerCasePadIds": "${LOWER_CASE_PAD_IDS:false}"
+  "lowerCasePadIds": "${LOWER_CASE_PAD_IDS:false}",
+  "ep_oauth":{
+    "clientID": "1219894765689114684",
+    "clientSecret": "0dGuj0neKRVlMGLkx0aENVdxfVo2aD2f",
+    "callbackURL": "https://etherpad-test.aitsys.dev/auth/callback"
+  }
 }
