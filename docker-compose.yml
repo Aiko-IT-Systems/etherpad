@@ -32,6 +32,7 @@ services:
       # change from development to production if needed
       NODE_ENV: development
       ADMIN_PASSWORD: ${DOCKER_COMPOSE_APP_DEV_ADMIN_PASSWORD}
+      ETHERPAD_PRODUCTION: false
       DB_CHARSET: ${DOCKER_COMPOSE_APP_DEV_ENV_DB_CHARSET:-utf8mb4}
       DB_HOST: postgres
       DB_NAME: ${DOCKER_COMPOSE_POSTGRES_DEV_ENV_POSTGRES_DATABASE:?}
