@@ -9,8 +9,8 @@ services:
     build:
       context: .
       args:
-        ETHERPAD_PLUGINS: >-
-          ep_pad-lister
+        ETHERPAD_PLUGINS: # >-
+#          ep_pad-lister
 #          ep_embedded_hyperlinks2
 #          ep_headings2
 #          ep_align
